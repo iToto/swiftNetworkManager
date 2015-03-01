@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NetowrkManagerViewController: UIViewController {
     
     let networkManager:NetworkManager = NetworkManager()
     let networkLossNotification = "com.dressed.networkLossNotification"
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         let noConnectionView = NoConnectionView(frame: screenSize)
         noConnectionView.alpha = 0
 
-        //code to animate bg with delay 2 and after completion it recursively calling animateImage method
+        // Will animate fade-in of view
         UIView.animateWithDuration(0.5, delay: 0, options:UIViewAnimationOptions.CurveEaseOut, animations: {() in
             noConnectionView.alpha = 0.8
             }, completion: nil)

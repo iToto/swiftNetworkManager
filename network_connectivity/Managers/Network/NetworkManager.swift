@@ -54,7 +54,7 @@ class NetworkManager : NSObject {
     
     func connectionLost(){
         while (!IJReachability.isConnectedToNetwork()){
-            NSLog("Still internet connection")
+//            NSLog("Still internet connection")
         }
         NSLog("Internet Connection Found!")
         var notificationError:NSError?
