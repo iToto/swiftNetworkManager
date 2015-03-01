@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FD72DCCD1AA39A8200CD8FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72DCCC1AA39A8200CD8FAF /* AppDelegate.swift */; };
-		FD72DCCF1AA39A8200CD8FAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72DCCE1AA39A8200CD8FAF /* ViewController.swift */; };
 		FD72DCD21AA39A8200CD8FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD72DCD01AA39A8200CD8FAF /* Main.storyboard */; };
 		FD72DCD41AA39A8200CD8FAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD72DCD31AA39A8200CD8FAF /* Images.xcassets */; };
 		FD72DCD71AA39A8200CD8FAF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD72DCD51AA39A8200CD8FAF /* LaunchScreen.xib */; };
@@ -16,6 +15,7 @@
 		FD72DCF21AA39AC100CD8FAF /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72DCEF1AA39AC100CD8FAF /* IJReachability.swift */; };
 		FD72DCF31AA39AC100CD8FAF /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72DCF11AA39AC100CD8FAF /* NoConnectionView.swift */; };
 		FD72DCF61AA3A4FE00CD8FAF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72DCF51AA3A4FE00CD8FAF /* NetworkManager.swift */; };
+		FD72DCFE1AA3B4EB00CD8FAF /* NetworkManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72DCFD1AA3B4EB00CD8FAF /* NetworkManagerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 		FD72DCC71AA39A8200CD8FAF /* network_connectivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = network_connectivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD72DCCB1AA39A8200CD8FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD72DCCC1AA39A8200CD8FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD72DCCE1AA39A8200CD8FAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD72DCD11AA39A8200CD8FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD72DCD31AA39A8200CD8FAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FD72DCD61AA39A8200CD8FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		FD72DCEF1AA39AC100CD8FAF /* IJReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		FD72DCF11AA39AC100CD8FAF /* NoConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
 		FD72DCF51AA3A4FE00CD8FAF /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FD72DCFD1AA3B4EB00CD8FAF /* NetworkManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,6 @@
 			children = (
 				FD72DCEC1AA39AC100CD8FAF /* Managers */,
 				FD72DCCC1AA39A8200CD8FAF /* AppDelegate.swift */,
-				FD72DCCE1AA39A8200CD8FAF /* ViewController.swift */,
 				FD72DCD01AA39A8200CD8FAF /* Main.storyboard */,
 				FD72DCD31AA39A8200CD8FAF /* Images.xcassets */,
 				FD72DCD51AA39A8200CD8FAF /* LaunchScreen.xib */,
@@ -130,6 +129,7 @@
 		FD72DCED1AA39AC100CD8FAF /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FD72DCFC1AA3B4EB00CD8FAF /* Controllers */,
 				FD72DCEE1AA39AC100CD8FAF /* Libs */,
 				FD72DCF01AA39AC100CD8FAF /* Views */,
 				FD72DCF51AA3A4FE00CD8FAF /* NetworkManager.swift */,
@@ -151,6 +151,14 @@
 				FD72DCF11AA39AC100CD8FAF /* NoConnectionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FD72DCFC1AA3B4EB00CD8FAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD72DCFD1AA3B4EB00CD8FAF /* NetworkManagerViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +264,7 @@
 				FD72DCF21AA39AC100CD8FAF /* IJReachability.swift in Sources */,
 				FD72DCF31AA39AC100CD8FAF /* NoConnectionView.swift in Sources */,
 				FD72DCF61AA3A4FE00CD8FAF /* NetworkManager.swift in Sources */,
-				FD72DCCF1AA39A8200CD8FAF /* ViewController.swift in Sources */,
+				FD72DCFE1AA3B4EB00CD8FAF /* NetworkManagerViewController.swift in Sources */,
 				FD72DCCD1AA39A8200CD8FAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
