@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A1D8AB633C182A1E7F8B22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A1DC0F3A36AF8DCBD4C218 /* ViewController.swift */; };
 		FD72DCCD1AA39A8200CD8FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD72DCCC1AA39A8200CD8FAF /* AppDelegate.swift */; };
 		FD72DCD21AA39A8200CD8FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD72DCD01AA39A8200CD8FAF /* Main.storyboard */; };
 		FD72DCD41AA39A8200CD8FAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD72DCD31AA39A8200CD8FAF /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10A1DC0F3A36AF8DCBD4C218 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD72DCC71AA39A8200CD8FAF /* network_connectivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = network_connectivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD72DCCB1AA39A8200CD8FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD72DCCC1AA39A8200CD8FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				FD72DCD31AA39A8200CD8FAF /* Images.xcassets */,
 				FD72DCD51AA39A8200CD8FAF /* LaunchScreen.xib */,
 				FD72DCCA1AA39A8200CD8FAF /* Supporting Files */,
+				10A1DC0F3A36AF8DCBD4C218 /* ViewController.swift */,
 			);
 			path = network_connectivity;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				FD72DCF61AA3A4FE00CD8FAF /* NetworkManager.swift in Sources */,
 				FD72DCFE1AA3B4EB00CD8FAF /* NetworkManagerViewController.swift in Sources */,
 				FD72DCCD1AA39A8200CD8FAF /* AppDelegate.swift in Sources */,
+				10A1D8AB633C182A1E7F8B22 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
