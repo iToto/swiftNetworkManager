@@ -12,6 +12,7 @@ import UIKit
 class NetworkManager : NSObject {
     let networkLossNotification = "com.dressed.networkLossNotification"
     let networkFoundNotification = "com.dressed.networkFoundNotification"
+    var hasConnection = false;
     
     /// Singleton
     class var sharedInstance: NetworkManager {
@@ -34,32 +35,41 @@ class NetworkManager : NSObject {
         NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "checkConnection", userInfo: nil, repeats: true)
     }
     
-    func testTimer() {
-        NSLog("timer test")
-    }
-    
     func checkConnection() {
         var notificationError:NSError?
+        
         if !IJReachability.isConnectedToNetwork() {
-            NSLog("Internet Connection Lost!")
+            if self.hasConnection {
+                self.hasConnection = false
+                NSLog("Internet Connection Lost!")
+                self.displayAlert()
+            }
 
-            // Notification
-            let notification:NSNotification = NSNotification(name: self.networkLossNotification, object:notificationError)
-            NSNotificationCenter.defaultCenter().postNotification(notification)
-            connectionLost()
         } else {
-            NSLog("Internet Connection Active")
+            if !self.hasConnection {
+                self.hasConnection = true
+                NSLog("Internet Connection Found!")
+            } else {
+                NSLog("Internet Connection Active")
+            }
         }
     }
     
-    func connectionLost(){
-        while (!IJReachability.isConnectedToNetwork()){
-//            NSLog("Still internet connection")
-        }
-        NSLog("Internet Connection Found!")
-        var notificationError:NSError?
-        // Notification
-        let notification:NSNotification = NSNotification(name: self.networkFoundNotification, object:notificationError)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
+    func displayAlert(){
+        let alertController = UIAlertController(
+            title: "Internet Connection Lost",
+            message: "Oops, it seems we lost the interwebs. We need the internet to continue.",
+            preferredStyle: .Alert)
+        
+        let action = UIAlertAction(
+            title: "Retry",
+            style: .Default,
+            handler: {(alert: UIAlertAction!) in
+                self.hasConnection = true
+        })
+        alertController.addAction(action)
+        
+        let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+        delegate.window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
     }
 }
