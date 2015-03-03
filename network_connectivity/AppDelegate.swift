@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     let networkManager:NetworkManager = NetworkManager()
-    let networkLossNotification = "com.dressed.networkLossNotification"
-    let networkFoundNotification = "com.dressed.networkFoundNotification"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
