@@ -8,17 +8,15 @@
 
 import UIKit
 
-class NetowrkManagerViewController: UIViewController {
+class NetworkManagerViewController: UIViewController {
     
-    let networkManager:NetworkManager = NetworkManager()
     let networkLossNotification = "com.dressed.networkLossNotification"
     let networkFoundNotification = "com.dressed.networkFoundNotification"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.networkManager.startNetworkMonitor()
-        
+
         // Register observer for network lost
         NSNotificationCenter.defaultCenter().addObserverForName(self.networkLossNotification,object:nil , queue:nil){ _ in
             self.displayNoConnectionView()
@@ -59,7 +57,9 @@ class NetowrkManagerViewController: UIViewController {
     
     func hideNoConnectionView() {
         NSLog("Remove no connection view")
-        self.view.removeFromSuperview()
+        for view in self.view.subviews {
+            view.removeFromSuperview()
+        }
     }
 
 
